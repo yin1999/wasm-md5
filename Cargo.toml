@@ -1,5 +1,5 @@
 [package]
-name = "sha1-wasm"
+name = "md5-wasm"
 version = "0.1.0"
 authors = ["yin1999 <15844309+yin1999@users.noreply.github.com>"]
 edition = "2018"

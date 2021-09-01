@@ -17,7 +17,7 @@ The browser should support ES module.
 <body>
 	<!-- enable ES module -->
 	<script type="module"> 
-		import init, { Sha1Digest } from '//cdn.jsdelivr.net/gh/yin1999/wasm-md5@release/sha1_wasm.js'
+		import init, { Md5Digest } from '//cdn.jsdelivr.net/gh/yin1999/wasm-md5@release/md5_wasm.js'
 		init()
 			.then(() => {
 				const hash = new Md5Digest()
