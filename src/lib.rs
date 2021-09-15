@@ -2,6 +2,8 @@ use std::{fmt::Write, io::Write as CharWriter};
 
 use md5::Context;
 use wasm_bindgen::prelude::*;
+use js_sys::Uint8Array;
+use js_sys::Array;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -34,5 +36,11 @@ impl Md5Digest {
             out.write_char(CH[(u &0xf) as usize].into()).unwrap();
         }
         out
+    }
+
+    pub fn finalize_bytes(self) -> Uint8Array {
+        let ans = self.hasher.compute().0;
+        let array: Array = ans.iter().map(|x| JsValue::from(*x as u8)).collect();
+        Uint8Array::new(&array)
     }
 }
