@@ -1,0 +1,15 @@
+{
+  "name": "md5-wasm",
+  "collaborators": [
+    "yin1999 <15844309+yin1999@users.noreply.github.com>"
+  ],
+  "version": "0.1.1",
+  "files": [
+    "md5_wasm_bg.wasm",
+    "md5_wasm.js",
+    "md5_wasm.d.ts"
+  ],
+  "module": "md5_wasm.js",
+  "types": "md5_wasm.d.ts",
+  "sideEffects": false
+}
